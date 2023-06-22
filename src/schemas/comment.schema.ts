@@ -1,13 +1,13 @@
 import mongoose, { Schema } from "mongoose";
-import IComment from "../interfaces/IComment";
+import IComment from "../constraints/interfaces/IComment";
 
 
 const commentSchema = new Schema<IComment>({
-    _id: {type: String, required: true},
-    content: {type: String, required: true},
-    productId: {type: String, required: true, ref: 'product'},
-    userId: {type: String, required: true, ref: 'user'}
-},{
+    _id: { type: String, required: true },
+    content: { type: String, required: true },
+    productId: { type: String, required: true, ref: 'product' },
+    userId: { type: String, required: true, ref: 'user' }
+}, {
     _id: false,
     timestamps: true
 })

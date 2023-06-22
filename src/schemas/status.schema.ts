@@ -1,5 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-import IStatus from "../interfaces/IStatus";
+import IStatus from "../constraints/interfaces/IStatus";
 
 
 const statusSchema = new Schema<IStatus>({

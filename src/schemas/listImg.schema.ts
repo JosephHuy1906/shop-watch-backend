@@ -1,5 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-import IListImg from "../interfaces/IListImg";
+import IListImg from "../constraints/interfaces/IListImg";
 
 
 const listImgSchema = new Schema<IListImg>({

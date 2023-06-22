@@ -1,5 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-import ICategory from "../interfaces/ICategory";
+import ICategory from "../constraints/interfaces/ICategory";
 
 const categorySchema = new Schema<ICategory>({
     _id: { type: String, required: true },
