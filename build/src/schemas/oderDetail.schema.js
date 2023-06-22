@@ -24,19 +24,13 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importStar(require("mongoose"));
-const nanoid_1 = require("nanoid");
-const userSchema = new mongoose_1.Schema({
+const oderDetailSchema = new mongoose_1.Schema({
     _id: { type: String, required: true },
-    email: { type: String, required: true },
-    fullName: { type: String, required: true },
-    password: { type: String, default: null },
-    verificationCode: { type: String, default: () => (0, nanoid_1.nanoid)() },
-    passwordResetCode: { type: String, default: null },
-    verified: { type: Boolean, default: false },
-    isRegistrationForm: { type: Boolean, default: false },
-    roleId: { type: String, default: '', ref: 'role' }
+    price: { type: Number, required: true },
+    quantity: { type: Number, required: true },
+    productId: { type: String, required: true, ref: 'product' },
 }, {
     _id: false,
     timestamps: true
 });
-exports.default = mongoose_1.default.model('user', userSchema);
+exports.default = mongoose_1.default.model('oderdetail', oderDetailSchema);
