@@ -6,5 +6,6 @@ export default interface IUser{
     isRegistrationForm: boolean;
     verificationCode: string;
     passwordResetCode?: string;
-    verified: boolean
+    verified: boolean;
+    roleId: string;
 }

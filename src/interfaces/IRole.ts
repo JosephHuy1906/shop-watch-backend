@@ -1,4 +1,4 @@
-export default interface IStatus{
+export default interface IRole{
     _id: string;
     name: string;
 }
